@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const SunCalc = require('suncalc');
 
+const port = process.env.PORT || 3000;
 const app = express();
 app.use(bodyParser.json());
 
@@ -29,6 +30,6 @@ app.get('/getingsunshinetimeaccordinglocation/:date/:lat/:lon', (req,res) => {
 });
 
 
-app.listen(3000, () =>{
-    console.log('App strating on port 3000');
+app.listen(port, () =>{
+    console.log(`App strating on port ${port}`);
   });
