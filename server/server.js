@@ -25,7 +25,8 @@ app.post('/getingsunshinetimeaccordinglocation', (req,res) => {
      const lan = req.body.lan;
     
      var a = new Date();
-
+     var b = new Date().getTimezoneOffset();
+    console.log(b);
   console.log(a.getUTCHours);
   // const time = parseInt(req.params.date);
   // const lat = parseInt(req.params.lat);
