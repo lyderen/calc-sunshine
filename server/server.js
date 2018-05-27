@@ -17,7 +17,7 @@ app.get('/', (req,res) => {
   res.send('<h1> woelcom to sunshine <h1> <p> u must send time langtidiu & longtediuo and u get the sunshuine time <p>');
 });
 
-app.post('/getingsunshinetimeaccordinglocation', (req,res) => {
+app.get('/getingsunshinetimeaccordinglocation', (req,res) => {
   
     const clientTime = parseFloat(req.body.time);
     const time = new Date(clientTime);
