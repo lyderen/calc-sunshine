@@ -17,13 +17,12 @@ app.get('/', (req,res) => {
   res.send('<h1> woelcom to sunshine <h1> <p> u must send time langtidiu & longtediuo and u get the sunshuine time <p>');
 });
 
-new Date().getTimezoneOffset
 app.post('/getingsunshinetimeaccordinglocation', (req,res) => {
   
     const clientTime = req.body.time;
     const time = new Date(clientTime);
-     const lat = req.body.lat;
-     const lan = req.body.lan;
+     const lat = parseInt(req.body.lat);
+     const lan = parseInt(req.body.lan);
     
    const  times = SunCalc.getTimes(new Date(clientTime),lat,lan);
   const sunriseStr = times.sunrise.getHours() + ':' + times.sunrise.getMinutes();
