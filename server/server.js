@@ -23,7 +23,9 @@ app.post('/getingsunshinetimeaccordinglocation', (req,res) => {
     const time = new Date(clientTime);
      const lat = parseFloat (req.body.lat);
      const lan = parseFloat(req.body.lan);
-const body = req.body
+const body = req.body;
+console.log(req);
+console.log(body);
    const  times = SunCalc.getTimes(new Date(clientTime),lat,lan);
   const sunriseStr = times.sunrise.getHours() + ':' + times.sunrise.getMinutes();
   const sunsetstr = times.sunset.getHours() + ':' + times.sunset.getMinutes();
