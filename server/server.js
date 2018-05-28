@@ -20,14 +20,15 @@ app.get('/', (req,res) => {
 app.post('/getingsunshinetimeaccordinglocation', (req,res) => {
   
     const clientTime = req.body.time;
+    const time = new Date(clientTime);
      const lat = parseFloat (req.body.lat);
      const lan = parseFloat(req.body.lan);
-
-   const  times = SunCalc.getTimes(new Date("2018/05/28"),lat,lan);
+const body = req.body
+   const  times = SunCalc.getTimes(new Date(clientTime),lat,lan);
   const sunriseStr = times.sunrise.getHours() + ':' + times.sunrise.getMinutes();
   const sunsetstr = times.sunset.getHours() + ':' + times.sunset.getMinutes();
   
-   res.send({times,sunriseStr,sunsetstr,clientTime,lat,lan });
+   res.send({body});
 
 });
 
