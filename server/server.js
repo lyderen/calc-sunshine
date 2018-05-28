@@ -18,7 +18,7 @@ app.get('/', (req,res) => {
 });
 
 app.post('/getingsunshinetimeaccordinglocation', (req,res) => {
-    const ip = req.ip;
+    
     const clientTime = req.body.time;
     const time = new Date(clientTime);
      const lat = parseFloat (req.body.lat);
@@ -27,8 +27,8 @@ app.post('/getingsunshinetimeaccordinglocation', (req,res) => {
    const  times = SunCalc.getTimes(new Date(clientTime),lat,lan);
   const sunriseStr = times.sunrise.getHours() + ':' + times.sunrise.getMinutes();
   const sunsetstr = times.sunset.getHours() + ':' + times.sunset.getMinutes();
-  
-   res.send({times,sunriseStr,sunsetstr,ip});
+    
+   res.send({times,sunriseStr,sunsetstr});
 
 });
 
