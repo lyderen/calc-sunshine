@@ -30,7 +30,7 @@ console.log(body);
   const sunriseStr = times.sunrise.getHours() + ':' + times.sunrise.getMinutes();
   const sunsetstr = times.sunset.getHours() + ':' + times.sunset.getMinutes();
   
-   res.send({body});
+   res.send({times,sunriseStr,sunsetstr});
 
 });
 
