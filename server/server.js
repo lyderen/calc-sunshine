@@ -20,7 +20,6 @@ app.get('/', (req,res) => {
 app.post('/getingsunshinetimeaccordinglocation', (req,res) => {
   
     const clientTime = req.body.time;
-    const time = new Date(clientTime);
      const lat = parseFloat (req.body.lat);
      const lan = parseFloat(req.body.lan);
 
