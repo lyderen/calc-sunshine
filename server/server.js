@@ -29,10 +29,7 @@ console.log(time,lat,lan);
   const sunriseStr = times.sunrise.getHours() + ':' + times.sunrise.getMinutes();
   const sunsetstr = times.sunset.getHours() + ':' + times.sunset.getMinutes();
    
-  
-
-   res.send({times,sunriseStr,sunset});
-
+  res.send({times,sunriseStr,sunsetstr});
 });
 
 
