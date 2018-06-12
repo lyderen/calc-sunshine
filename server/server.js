@@ -31,7 +31,7 @@ console.log(time,lat,lan);
    
   
 
-   res.status(200).send({times,sunriseStr,sunset});
+   res.send({times,sunriseStr,sunset});
 
 });
 
