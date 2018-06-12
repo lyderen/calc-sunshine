@@ -28,8 +28,10 @@ console.log(time,lat,lan);
    const  times = SunCalc.getTimes(new Date(clientTime),lat,lan);
   const sunriseStr = times.sunrise.getHours() + ':' + times.sunrise.getMinutes();
   const sunsetstr = times.sunset.getHours() + ':' + times.sunset.getMinutes();
-    
-   res.send({times,sunriseStr,sunsetstr});
+   
+  const allInfo = {times,sunriseStr,sunset}
+
+   res.send(JSON.stringify(allInfo));
 
 });
 
