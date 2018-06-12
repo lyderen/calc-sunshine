@@ -29,9 +29,9 @@ console.log(time,lat,lan);
   const sunriseStr = times.sunrise.getHours() + ':' + times.sunrise.getMinutes();
   const sunsetstr = times.sunset.getHours() + ':' + times.sunset.getMinutes();
    
-  const allInfo = {times,sunriseStr,sunset}
+  
 
-   res.send(JSON.stringify(allInfo));
+   res.status(200).send({times,sunriseStr,sunset});
 
 });
 
